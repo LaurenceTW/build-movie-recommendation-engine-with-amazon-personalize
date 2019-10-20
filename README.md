@@ -144,15 +144,11 @@ In this part, we create a dataset group with the data we uploaded to **S3 bucket
 
 - If you are using **Personalize** for the first time, select **Get Started**, otherwise select **Create dataset group**, select **Next**.
 
-- In **Dataset group name** type ```my-personalize-dataset-group```, and ☑ **Upload user-item interaction data** for **Input data**.
-
-* **User-item interaction data**: Data that includes information regarding users and items that have interactions, such as user rates the movie.
-
-* **Install event ingestion SDK**: If you don't have existing user-item interaction data, you can install the event ingestion SDK supported by **Amazon Personalize** onto your application to record the data.
+- In **Dataset group name** type ```my-personalize-dataset-group```.
 
 <div>
 <p align="center">
-    <img src="images/03-Personalize-Name.jpg">
+    <img src="images/03-Personalize-Name.png">
 </p>
 </div>
 
@@ -228,14 +224,12 @@ In this part, we are going to create a solution, the advantage of using **Amazon
     <img src="images/07-Personalize-AutoML.jpg" width="50%" height="50%">
 </p>
 </div>
-
 - This will default select three machine learning recipe, the three methods details:
-    * [aws-deepfm](https://docs.aws.amazon.com/zh_tw/personalize/latest/dg/native-recipe-deepfm.html)
-        * Recommendations for quick training and inference with good general performance.
-    * [aws-ffnn](https://docs.aws.amazon.com/zh_tw/personalize/latest/dg/native-recipe-ffnn.html)
-        * Recommendations for quick training and inference, and scalability for large data sets.
-    * [aws-hrnn](https://docs.aws.amazon.com/personalize/latest/dg/native-recipe-hrnn.html)
-        * The recommended timing is that user behavior changes over time (progressive intent issues).
+
+- [aws-hrnn](https://docs.aws.amazon.com/personalize/latest/dg/native-recipe-hrnn.html)
+    - The recommended timing is that user behavior changes over time (progressive intent issues).
+- [aws-hrnn-metadata](https://docs.aws.amazon.com/personalize/latest/dg/native-recipe-hrnn-metadata.html)
+    - Similar to the HRNN recipe, with additional features derived from contextual, user, and item metadata.
 
 <div>
 <p align="center">
@@ -243,10 +237,16 @@ In this part, we are going to create a solution, the advantage of using **Amazon
 </p>
 </div>
 
+
 - Select **Next** check the details of this solution if there is no problem, select **Finish**.
 
-- Wait for the **Solution creation**, this might take 30-40 minutes.
-> You don't have to wait for the creation, do the next step.
+- Wait for the **Solution versions** at least one is Active, this might take 30-40 minutes.
+<div>
+<p align="center">
+    <img src="images/08-Personalize-Solution-Active.png" width="70%" height="70%">
+</p>
+</div>
+
 
 ## Create Campaign
 In this part, we are going to the last part of **Amazon Personalize**, generating the recommend page with the solution created at last part.
