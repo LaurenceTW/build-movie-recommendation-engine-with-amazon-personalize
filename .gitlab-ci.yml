@@ -1,0 +1,16 @@
+stages:
+    - backup
+    
+backupJob:
+  image: centos:latest
+  stage: backup
+  only:
+   - master
+  script:
+  - mv src/Language src/language
+  - yum --enablerepo=extras install epel-release -y
+  - yum install zip -y
+  - yum install python-pip -y
+  - pip install awscli
+  - zip labrochure.zip ./* -r
+  - aws s3 cp ./labrochure.zip s3://labrochure-backup
