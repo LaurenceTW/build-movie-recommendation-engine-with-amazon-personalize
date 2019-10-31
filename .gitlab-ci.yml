@@ -1,16 +1,7 @@
-stages:
-    - backup
-    
-backupJob:
-  image: centos:latest
-  stage: backup
+deploy:
+  image: quay.io/coreos/awscli
   only:
    - master
   script:
-  - mv src/Language src/language
-  - yum --enablerepo=extras install epel-release -y
-  - yum install zip -y
-  - yum install python-pip -y
-  - pip install awscli
-  - zip labrochure.zip ./* -r
-  - aws s3 cp ./labrochure.zip s3://labrochure-backup
+  - S3_RELATIVE_PATH="${CI_PROJECT_PATH//$REMOVE_PREFIX/}"
+  - aws s3 sync ./ s3://$S3_BUCKET_NAME$S3_RELATIVE_PATH --delete --exclude ".git/*" --exclude ".DS_Store" --exclude ".gitlab-ci.yml"
