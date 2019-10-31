@@ -4,7 +4,7 @@
 
 <div>
 <p align="center">
-    <img src="images/Personalize_architecture.png">
+    <img src="./images/Personalize_architecture.png">
 </p>
 </div>
 
@@ -23,12 +23,12 @@ In this lab, we are going to import an **user-item interaction** dataset from S3
 - On the Service menu, select [S3](https://s3.console.aws.amazon.com/s3/home?region=us-east-1).
 
 - Select **Create bucket**.
-<center><img src="images/03-CreateS3Bucket.jpg"></center>
+<center><img src="./images/03-CreateS3Bucket.jpg"></center>
 
 - Type an ***unique name*** for your **S3 bucket**.(e.g., movie-dataset-yourname)
 
 - Select **Create** on the down-left of the create console.
-<center><img src="images/04-CreateS3Bucket.jpg"></center>
+<center><img src="./images/04-CreateS3Bucket.jpg"></center>
 
 - Search for your bucket name and click it on the name to enter the bucket.
 
@@ -37,11 +37,11 @@ In this lab, we are going to import an **user-item interaction** dataset from S3
 
 - Uncheck all the ☑, select **Save**.
 
-<center><img src="images/01-S3-Permissions.jpg"></center>
+<center><img src="./images/01-S3-Permissions.jpg"></center>
 
 - Select **Bucket policy**, copy and paste the json code below, remember to change **<your-bucket-name\>** to your own bucket name, and select **Save**. 
 
-<center><img src="images/01-BucketPolicy.jpg"></center>
+<center><img src="./images/01-BucketPolicy.jpg"></center>
 
 - This **Bucket policy** is for **Amazon Personalize** to get data and list data in **S3 bucket**.
 ```json
@@ -69,12 +69,12 @@ In this lab, we are going to import an **user-item interaction** dataset from S3
 ```
 
 - Select **Create folder**, type **movie rating** for the folder name.
-<center><img src="images/10-CreateS3Folder.png"></center>
+<center><img src="./images/10-CreateS3Folder.png"></center>
 
 - Click on the folder name to enter the folder.
 
 - Select **Upload**, select **Add files**, choose the [ratings.csv](ratings.csv) we downloaded in the **Prerequisites**, select **Upload** on the down-left of the upload console.
-<center><img src="images/11-UploadRatingCSV.png"></center>
+<center><img src="./images/11-UploadRatingCSV.png"></center>
 
 - Select the file to enter.
 
@@ -82,7 +82,7 @@ In this lab, we are going to import an **user-item interaction** dataset from S3
 
 <div>
 <p align="center">
-    <img src="images/11-S3-Make_public.jpg">
+    <img src="./images/11-S3-Make_public.jpg">
 </p>
 </div>
 
@@ -92,7 +92,7 @@ In this section, we create an **IAM Role** for **Amazon Personalize** to read da
 - On the **Service** menu, select [IAM](https://console.aws.amazon.com/iam/home?region=us-east-1#/home).
 
 - Select **Roles** on the left navigation pane, select **Create role**.
-<center><img src="images/12-CreateRole.jpg"></center>
+<center><img src="./images/12-CreateRole.jpg"></center>
 
 - Select **AWS service** under **Select type of trusted entity**, as for **Choose the service that will use this role** select **Personalize**, if you can't find it just select **EC2**, select **Next:Permissions**.
 
@@ -106,7 +106,7 @@ In this section, we create an **IAM Role** for **Amazon Personalize** to read da
 
 <div>
 <p align="center">
-    <img src="images/02-IAM-Role.jpg" width="50%" height="50%">
+    <img src="./images/02-IAM-Role.jpg" width="50%" height="50%">
 </p>
 </div>
 
@@ -148,7 +148,7 @@ In this part, we create a dataset group with the data we uploaded to **S3 bucket
 
 <div>
 <p align="center">
-    <img src="images/03-Personalize-Name.png">
+    <img src="./images/03-Personalize-Name.png">
 </p>
 </div>
 
@@ -197,7 +197,7 @@ In this part, we create a dataset group with the data we uploaded to **S3 bucket
 
 <div>
 <p align="center">
-    <img src="images/05-Personalize-ImportS3.jpg" width="50%" height="50%">
+    <img src="./images/05-Personalize-ImportS3.jpg" width="50%" height="50%">
 </p>
 </div>
 
@@ -212,7 +212,7 @@ In this part, we are going to create a solution, the advantage of using **Amazon
 
 <div>
 <p align="center">
-    <img src="images/06-Personalize-Solution_create.jpg" width="70%" height="70%">
+    <img src="./images/06-Personalize-Solution_create.jpg" width="70%" height="70%">
 </p>
 </div>
 
@@ -221,7 +221,7 @@ In this part, we are going to create a solution, the advantage of using **Amazon
 
 <div>
 <p align="center">
-    <img src="images/07-Personalize-AutoML.jpg" width="50%" height="50%">
+    <img src="./images/07-Personalize-AutoML.jpg" width="50%" height="50%">
 </p>
 </div>
 - This will default select three machine learning recipe, the three methods details:
@@ -233,7 +233,7 @@ In this part, we are going to create a solution, the advantage of using **Amazon
 
 <div>
 <p align="center">
-    <img src="images/08-Personalize-AutoML_recipe.png" width="50%" height="50%">
+    <img src="./images/08-Personalize-AutoML_recipe.png" width="50%" height="50%">
 </p>
 </div>
 
@@ -243,7 +243,7 @@ In this part, we are going to create a solution, the advantage of using **Amazon
 - Wait for the **Solution versions** at least one is Active, this might take 30-40 minutes.
 <div>
 <p align="center">
-    <img src="images/08-Personalize-Solution-Active.png" width="70%" height="70%">
+    <img src="./images/08-Personalize-Solution-Active.png" width="70%" height="70%">
 </p>
 </div>
 
@@ -255,7 +255,7 @@ In this part, we are going to the last part of **Amazon Personalize**, generatin
 
 <div>
 <p align="center">
-    <img src="images/09-Personalize-Campaign_create.jpg" width="70%" height="70%">
+    <img src="./images/09-Personalize-Campaign_create.jpg" width="70%" height="70%">
 </p>
 </div>
 
@@ -263,7 +263,7 @@ In this part, we are going to the last part of **Amazon Personalize**, generatin
 
 <div>
 <p align="center">
-    <img src="images/10-Personalize-Campaign_details.jpg" >
+    <img src="./images/10-Personalize-Campaign_details.jpg" >
 </p>
 </div>
 
@@ -273,14 +273,14 @@ In this part, we are going to the last part of **Amazon Personalize**, generatin
 
 <div>
 <p align="center">
-    <img src="images/12-Personalize-Campaign.jpg" >
+    <img src="./images/12-Personalize-Campaign.jpg" >
 </p>
 </div>
 
 - Please copy **Campaign ARN** in the Campaign inference.
 <div>
 <p align="center">
-    <img src="images/13-CampaignARN.jpg" >
+    <img src="./images/13-CampaignARN.jpg" >
 </p>
 </div>
 
@@ -293,12 +293,12 @@ In this part, we are going to the last part of **Amazon Personalize**, generatin
 
 - Enter your Email, First Name, Last Name and the reason for Use, and then click submit.
 <p align="center">
-    <img src="images/14-OMDBAPI.png" >
+    <img src="./images/14-OMDBAPI.png" >
 </p>
 
 - Check the mail box, and you need to click the link to activate you api key.
 <p align="center">
-    <img src="images/15-CheckAPIKey.jpg" >
+    <img src="./images/15-CheckAPIKey.jpg" >
 </p>
 
 - When you activate the api key, please note the OMDb API in the mail and we will use it latter.
@@ -338,17 +338,17 @@ sudo python -m pip install Flask
 
 - Open the **masterials/flask-app/app.py**,click **Run** on the toolbar and click **Preview Running Application** in **Preview**.
 <p align="center">
-    <img src="images/16-Preview1.png" >
+    <img src="./images/16-Preview1.png" >
 </p>
 
 - Enter the user id and click predict.
 <p align="center">
-    <img src="images/17-Preview2.png" >
+    <img src="./images/17-Preview2.png" >
 </p>
 
 - You will see the result like below.
 <p align="center">
-    <img src="images/18-Preview3.png" >
+    <img src="./images/18-Preview3.png" >
 </p>
 
 ## Conclusion
