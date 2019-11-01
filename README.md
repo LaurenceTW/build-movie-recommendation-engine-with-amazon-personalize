@@ -332,11 +332,11 @@ sudo python -m pip install requests
 ```
 sudo python -m pip install Flask
 ```
-- Open the **masterials/flask-app/personalize.py** and paste the __Campaign Arn__ in line 17.
+- Open the **./masterials/flask-app/personalize.py** and paste the __Campaign Arn__ in line 17.
 
 - Paste your api key url in line 20.
 
-- Open the **masterials/flask-app/app.py**,click **Run** on the toolbar and click **Preview Running Application** in **Preview**.
+- Open the **./masterials/flask-app/app.py**,click **Run** on the toolbar and click **Preview Running Application** in **Preview**.
 <p align="center">
     <img src="./images/16-Preview1.png" >
 </p>
