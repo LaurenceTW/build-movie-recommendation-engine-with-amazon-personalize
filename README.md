@@ -16,7 +16,7 @@ In this lab, we are going to import an **user-item interaction** dataset from S3
 
 ## Prerequisites
 
-* Download [ratings.csv](ratings.csv) to local, this dataset is a list of movie ratings rate by over 1,000 people, the columns includes `USER_ID,RATING`, `TIMESTAMP`, `ITEM_ID`, and `RATING`.
+* Download [ratings.csv](./masterials/ratings.csv) to local, this dataset is a list of movie ratings rate by over 1,000 people, the columns includes `USER_ID,RATING`, `TIMESTAMP`, `ITEM_ID`, and `RATING`.
 
 ## Create S3 bucket
 
@@ -73,7 +73,7 @@ In this lab, we are going to import an **user-item interaction** dataset from S3
 
 - Click on the folder name to enter the folder.
 
-- Select **Upload**, select **Add files**, choose the [ratings.csv](ratings.csv) we downloaded in the **Prerequisites**, select **Upload** on the down-left of the upload console.
+- Select **Upload**, select **Add files**, choose the [ratings.csv](./masterials/ratings.csv) we downloaded in the **Prerequisites**, select **Upload** on the down-left of the upload console.
 <center><img src="./images/11-UploadRatingCSV.png"></center>
 
 - Select the file to enter.
@@ -193,7 +193,7 @@ In this part, we create a dataset group with the data we uploaded to **S3 bucket
 
 - Select **Next**.
 
-- Type ```my-dataset-import``` for **Dataset import job name** and paste your **Role ARN** into **Custom IAM role ARN**, type your S3 path for [ratings.csv](ratings.csv) as ```s3://<your-bucket-name>/movie rating/ratings.csv```.
+- Type ```my-dataset-import``` for **Dataset import job name** and paste your **Role ARN** into **Custom IAM role ARN**, type your S3 path for [ratings.csv](./masterials/ratings.csv) as ```s3://<your-bucket-name>/movie rating/ratings.csv```.
 
 <div>
 <p align="center">
