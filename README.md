@@ -318,7 +318,7 @@ You will need to wait Cloud9 for setup environment in a few minutes <br>
 
 - Paste command at below terminal.
 ```
-git clone xxx
+git clone https://gitlab.com/ecloudture/aws/aws-ai-workshop/build-movie-recommendation-engine-with-amazon-personalize.git
 ```
 - Install latest boto3 to Cloud9 environment.
 ```
@@ -331,6 +331,10 @@ sudo python -m pip install requests
 - Install Flask build the application.
 ```
 sudo python -m pip install Flask
+```
+- Unzip project application.
+```
+unzip ./build-movie-recommendation-engine-with-amazon-personalize/materials/flask-app.zip -d ./build-movie-recommendation-engine-with-amazon-personalize/materials/
 ```
 - Open the **./masterials/flask-app/personalize.py** and paste the __Campaign Arn__ in line 17.
 
