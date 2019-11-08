@@ -4,7 +4,7 @@
 
 <div>
 <p align="center">
-    <img src="./images/Personalize_architecture.png">
+    <img src="./images/Personalize_architecture.png" width="70%">
 </p>
 </div>
 
