@@ -1,7 +1,6 @@
 # Build Movie Recommendation Engine with Amazon Personalize
 
 ## Overview
-
 <div>
 <p align="center">
     <img src="./images/Personalize_architecture.png" width="70%">
